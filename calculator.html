@@ -1,0 +1,224 @@
+<html>
+    <head>
+        <title>Calculator</title>
+    </head>
+    <style>
+        form{
+            margin-left: auto;
+            margin-right: auto;
+            width: 295px;
+            height: 393px;
+            background-color: rgb(255, 255, 255);
+            margin-top: 210px;
+            border-radius: 10px;
+        }
+        body{
+            background-color: black;
+        }
+        .i1{
+            width: 270px;
+            height: 50px;
+            margin-top: 30px;
+            margin-left: 12px;
+            border : 0.3px solid rgb(0, 0, 0);
+            font-size: 18px;
+            padding-left: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            box-shadow: inset 2px 2px 5px rgb(125, 125, 125);
+        }
+        
+        .b1{
+            display: inline-block;
+            margin-left: 10px;
+            margin-top: 20px;
+            width: 60px;
+            height: 60px;
+            font-size: 20px;
+            border-radius: 5px;
+            background: linear-gradient(to bottom,rgb(220, 220, 220),rgb(74, 74, 74));
+            
+        }
+        .b2{
+            display: inline-block;
+            margin-left: 10px;
+            margin-top: 20px;
+            width: 60px;
+            height: 60px;
+            font-size: 20px;
+            border-radius: 5px;
+            background: linear-gradient(to bottom,rgb(220, 220, 220),rgb(74, 74, 74));
+        }
+        .b3{
+            display: inline-block;
+            margin-left: 10px;
+            margin-top: 20px;
+            width: 60px;
+            height: 60px;
+            font-size: 20px;
+            border-radius: 5px;
+            background: linear-gradient(to bottom,rgb(220, 220, 220),rgb(74, 74, 74));
+        }
+        .b4{
+            display: inline-block;
+            margin-left: 10px;
+            margin-top: 20px;
+            width: 50px;
+            height: 60px;
+            font-size: 20px;
+            border-radius: 5px;
+            background-color: black;
+            color: white;
+        }
+        .b5{
+            display: inline-block;
+            margin-left: 10px;
+            margin-top: 10px;
+            width: 60px;
+            height: 60px;
+            font-size: 20px;
+            border-radius: 5px;
+            background: linear-gradient(to bottom,rgb(220, 220, 220),rgb(74, 74, 74));
+        }
+        .b6{
+            display: inline-block;
+            margin-left: 10px;
+            margin-top: 10px;
+            width: 60px;
+            height: 60px;
+            font-size: 20px;
+            border-radius: 5px;
+            background: linear-gradient(to bottom,rgb(220, 220, 220),rgb(74, 74, 74));
+        }
+        .b7{
+            display: inline-block;
+            margin-left: 10px;
+            margin-top: 10px;
+            width: 60px;
+            height: 60px;
+            font-size: 20px;
+            border-radius: 5px;
+            background: linear-gradient(to bottom,rgb(220, 220, 220),rgb(74, 74, 74));
+        }
+        .b8{
+            display: inline-block;
+            margin-left: 10px;
+            margin-top: 10px;
+            width: 50px;
+            height: 60px;
+            font-size: 20px;
+            border-radius: 5px;
+            background-color: black;
+            color: white;
+        }
+        .b9{
+            display: inline-block;
+            margin-left: 10px;
+            margin-top: 10px;
+            width: 60px;
+            height: 60px;
+            font-size: 20px;
+            border-radius: 5px;
+            background: linear-gradient(to bottom,rgb(220, 220, 220),rgb(74, 74, 74));
+        }
+        .b10{
+            display: inline-block;
+            margin-left: 10px;
+            margin-top: 10px;
+            width: 60px;
+            height: 60px;
+            font-size: 20px;
+            border-radius: 5px;
+            background: linear-gradient(to bottom,rgb(220, 220, 220),rgb(74, 74, 74));
+        }
+        .b11{
+            display: inline-block;
+            margin-left: 10px;
+            margin-top: 10px;
+            width: 60px;
+            height: 60px;
+            font-size: 20px;
+            border-radius: 5px;
+            background: linear-gradient(to bottom,rgb(220, 220, 220),rgb(74, 74, 74));
+        }
+        .b12{
+            display: inline-block;
+            margin-left: 10px;
+            margin-top: 10px;
+            width: 50px;
+            height: 60px;
+            font-size: 20px;
+            border-radius: 5px;
+            background-color: black;
+            color: white;
+        }
+        .b13{
+            display: inline-block;
+            margin-left: 10px;
+            margin-top: 10px;
+            width: 60px;
+            height: 60px;
+            font-size: 20px;
+            border-radius: 5px;
+            background-color: rgb(186, 66, 66);
+        }
+        .b14{
+            display: inline-block;
+            margin-left: 10px;
+            margin-top: 10px;
+            width: 60px;
+            height: 60px;
+            font-size: 20px;
+            border-radius: 5px;
+            background: linear-gradient(to bottom,rgb(220, 220, 220),rgb(74, 74, 74));
+        }
+        .b15{
+            display: inline-block;
+            margin-left: 10px;
+            margin-top: 10px;
+            width: 60px;
+            height: 60px;
+            font-size: 20px;
+            border-radius: 5px;
+            background-color: black;
+            color: white;
+        }
+        .b16{
+            display: inline-block;
+            margin-left: 10px;
+            margin-top: 10px;
+            width: 50px;
+            height: 60px;
+            font-size: 20px;
+            border-radius: 5px;
+            background-color: black;    
+            color: white;
+        }
+        button:hover{
+            background-color: rgb(99, 99, 99);
+        }
+
+    </style>
+    <body>
+         <form>
+            <input class="i1" type="text"><br>
+            <button class="b1">7</button>
+            <button class="b2">8</button>
+            <button class="b3">9</button>
+            <button class="b4">+</button><br>
+            <button class="b5">4</button>
+            <button class="b6">5</button>
+            <button class="b7">6</button>
+            <button class="b8">-</button><br>
+            <button class="b9">1</button>
+            <button class="b10">2</button>
+            <button class="b11">3</button>
+            <button class="b12">*</button><br>
+            <button class="b13">C</button>
+            <button class="b14">0</button>
+            <button class="b15">=</button>
+            <button class="b16">/</button><br>
+
+         </form>
+    </body>
+</html>
