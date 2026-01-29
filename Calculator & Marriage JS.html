@@ -1,0 +1,163 @@
+<html> 
+<head> 
+    <title>Mini Project: Forms & Functions</title> 
+    <style> 
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: rgb(240, 248, 255); 
+            margin: 20px; 
+        } 
+ 
+        h1 { 
+            text-align: center; 
+            color: rgb(51, 51, 51); 
+        } 
+ 
+        .container { 
+            width: 50%; 
+            margin: 0 auto; 
+            background-color: white; 
+            padding: 15px; 
+            border-radius: 15px;  
+            box-shadow: 0px 0px 10px rgb(38, 38, 38);  
+        } 
+ 
+        form { 
+            margin-bottom: 30px; 
+            padding: 20px; 
+            border: 1px solid rgb(204, 204, 204); 
+            border-radius: 5px; 
+        } 
+ 
+        h3 { 
+            margin-top: 0; 
+            color: rgb(255, 153, 0); 
+            border-bottom: 2px solid rgb(255, 153, 0); 
+            padding-bottom: 5px; 
+        } 
+ 
+        input, select { 
+            padding: 8px; 
+            margin: 5px 0; 
+            width: 95%;  
+            border: 1px solid rgb(204, 204, 204); 
+            border-radius: 4px; 
+        } 
+ 
+        button { 
+            background-color: rgb(251, 0, 0); 
+            color: white; 
+            padding: 10px 15px; 
+            border: none; 
+            border-radius: 4px; 
+            cursor: pointer; 
+            font-weight: bold; 
+            margin-top: 10px; 
+        } 
+ 
+        button:hover { 
+            background-color: rgb(136, 33, 33); 
+        } 
+ 
+         
+        .cal-button { 
+            width: 20%; 
+            background-color: rgb(32, 216, 29); 
+            margin-left: 20px;
+        } 
+ 
+        .result { 
+            margin-top: 10px; 
+            font-weight: bold; 
+            color: rgb(230, 76, 10); 
+            font-size: 20px; 
+        } 
+    </style> 
+</head> 
+<body> 
+ 
+    <div class="container"> 
+ 
+        <form> 
+            <h3>Calculator</h3> 
+            <label>Enter 1st Number:</label> 
+            <input type="number" id="num1" placeholder="e.g. 10"> 
+             
+            <label>Enter 2nd Number:</label> 
+            <input type="number" id="num2" placeholder="e.g. 5"> <br>
+ 
+             
+            <button type="button" class="cal-button" onclick="calculate('+')">+</button> 
+            <button type="button" class="cal-button" onclick="calculate('-')">-</button> 
+            <button type="button" class="cal-button" onclick="calculate('*')">*</button> 
+            <button type="button" class="cal-button" onclick="calculate('/')">÷</button> 
+ 
+            <div class="result" id="calcOutput">Result:-</div> 
+        </form> 
+        <br>
+        <form> 
+            <h3>Marriage Eligibility</h3> 
+            <label>Select Gender:</label> 
+            <select id="gender"> 
+                <option value="m">Male</option> 
+                <option value="f">Female</option> 
+            </select> 
+ 
+            <label>Enter Age:</label> 
+            <input type="number" id="age" placeholder="e.g. 21"> 
+ 
+            <button type="button" onclick="checkMarriage()">Check Status</button> 
+ 
+            <div class="result" id="marriageOutput">Status:-</div> 
+        </form> 
+    </div> 
+ 
+    <script> 
+        //  1. CALCULATOR LOGIC     
+        // Arrow functions for basic math 
+        let addition = (a, b) => a + b; 
+        let subtraction = (a, b) => a - b; 
+        let multiplication = (a, b) => a * b; 
+        let division = (a, b) => a / b; 
+ 
+         
+        let calculate = (operator) => { 
+             
+            let n1 = Number(document.getElementById("num1").value); 
+            let n2 = Number(document.getElementById("num2").value); 
+            let res = 0; 
+ 
+            if(operator === '+') res = addition(n1,n2); 
+            else if(operator === '-') res = subtraction(n1,n2); 
+            else if(operator === '*') res = multiplication(n1,n2); 
+            else if(operator === '/') res = division(n1,n2); 
+ 
+             
+            document.getElementById("calcOutput").innerHTML = "Result: " + res; 
+        }; 
+ 
+        // 2. MARRIAGE LOGIC   
+        let getStatus = (g, a) => { 
+            if (g === "m" && a >= 21) { 
+                return "Eligible for Marriage"; 
+            }  
+            else if (g === "f" && a >= 18) { 
+                return "Eligible for Marriage"; 
+            }  
+            else { 
+                return "Not Eligible"; 
+            } 
+        }; 
+ 
+         
+        let checkMarriage=() => { 
+             
+            let gender = document.getElementById("gender").value; 
+            let age = Number(document.getElementById("age").value); 
+            let resultMessage = getStatus(gender, age); 
+            document.getElementById("marriageOutput").innerHTML = "Status: " + resultMessage; 
+        }; 
+ 
+    </script> 
+</body> 
+</html> 
