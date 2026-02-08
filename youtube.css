@@ -1,0 +1,78 @@
+body{
+    background-image: url(youtube-back-2.png);
+    background-size: cover;
+}
+fieldset{
+    Width: 300px;
+    margin-left: 560px;
+    margin-top: 120px;
+    height: 440px;
+    background: rgba(255, 60, 60, 0.8);
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.7);
+    
+}
+.a1{
+    color: rgb(43, 43, 43);
+    font-size: 16px;
+    margin-left: 85px;
+}
+.a2{
+    color: rgb(40, 40, 40);
+}
+h1{
+    text-align: center;
+    margin-bottom: 45px;
+    margin-top: 50px;
+    color: white;
+}
+.p1{
+    color: white;
+    margin-left: 37px;
+}
+.i1{
+    border-bottom: 1.5px solid white;
+    display: flex;
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-left: 65px;
+    background: transparent;
+
+}
+.i1::placeholder{
+    color: white;
+}
+.i2::placeholder{
+    color: white;
+}
+.i2{
+    border-bottom: 1.5px solid white;
+    display: flex;
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-left: 65px;
+    background: transparent;
+    margin-bottom: 10px;
+}
+button {
+  width: 80px;
+  padding: 12px;
+  border-radius: 30px;
+  border: none;
+  background: white;
+  color: red;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 110px;
+  margin-bottom: 10px;
+  margin-top: 40px;
+}
+button:hover{
+    background-color: rgb(10, 2, 2);
+}

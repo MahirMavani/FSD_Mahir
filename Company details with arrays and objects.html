@@ -1,0 +1,98 @@
+<html>
+<head>
+    <title>company detail using objects</title>
+</head>
+<style>
+    .buttons{
+        color: rgb(255, 255, 255);
+        background-color: rgb(97, 130, 230);
+        margin-left: 13px;
+        border-radius: 5px;
+        height: 30px;
+    }
+    fieldset{
+        width: 380px;
+        margin-left: 520px;
+        height: 200px;
+        margin-top: 210px;
+        border-radius: 10px;
+    }
+    button:hover{
+        background-color: black;
+    }
+    h2{
+        text-align: center;
+    }
+</style>
+<body>
+    
+    <fieldset>
+    <h2>Company Details</h2>
+    
+    <button class="buttons" onclick="showcompany('Apple')">Apple</button>
+    <button class="buttons" onclick="showcompany('BMW')">BMW</button>
+    <button class="buttons" onclick="showcompany('Nike')">Nike</button>
+    <button class="buttons" onclick="showcompany('Microsoft')">Microsoft</button>
+    <button class="buttons" onclick="showcompany('Amazon')">Amazon</button>
+    </div>
+    <p id="output"></p>
+
+    <script>
+        let companies = {
+            Apple: {
+                name: "Apple",
+                founder: "Steve Jobs & Steve Wozniack",
+                employees: "190,000+",
+                avgpkg: "25 lpa",
+                location: "usa"
+            },
+
+            BMW: {
+                name: "BMW",
+                founder: "Franz Josef Popp",
+                employees: "335,000+",
+                avgpkg: "16 lpa",
+                location: "Germany"
+            },
+
+            Nike: {
+                name: "Nike",
+                founder: "Phil Knight",
+                employees: "600,000+",
+                avgpkg: "18 lpa",
+                location: "USA"
+            },
+
+            Microsoft: {
+                name: "Microsoft",
+                founder: "bill gates",
+                employees: "220,000+",
+                avgpkg: "30 lpa",
+                location: "usa"
+            },
+
+            Amazon: {
+                name: "Amazon",
+                founder: "jeff bezos",
+                employees: "1,500,000+",
+                avgpkg: "28 lpa",
+                location: "usa"
+            }
+        };
+
+        function showcompany(key) {
+            let c = companies[key];
+
+            document.getElementById("output").innerHTML =
+                "<b>company name:</b> " + c.name + "<br>" +
+                "<b>founder:</b> " + c.founder + "<br>" +
+                "<b>employees:</b> " + c.employees + "<br>" +
+                "<b>avg package:</b> " + c.avgpkg + "<br>" +
+                "<b>location:</b> " + c.location;
+        }
+    </script>
+    </fieldset>
+    
+
+</body>
+</html>

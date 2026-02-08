@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>Digital Clock </title>
+        <style>
+             body{
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Times New Roman', serif;
+        }
+
+        fieldset{
+            background-color: black;
+            border-radius: 15px;
+            padding: 25px 40px;
+            border: 2px solid rgb(0,247,255);
+            box-shadow:0 0 20px rgb(0,247,255),
+                       0 0 40px rgba(0,247,255,0.8);
+            margin-left: -150px;
+            margin-top: -50px;
+        }
+
+        h2{
+            color: rgb(0,247,255);
+            font-size: 55px;
+            margin: 0;
+            text-align: center;
+            letter-spacing: 2px;
+            text-shadow: 0 0 5px rgb(0,247,255),
+                
+        }
+            
+        </style>
+    </head>
+    <body>
+        <h1>Digital Clock</h1>
+        <form>
+
+        <fieldset>
+
+        <h2 id="clock">PM</h2>
+        <script>
+            function Time(){
+                let now = new Date();
+                let hours = now.getHours();
+                let min = now.getMinutes();
+                let sec = now.getSeconds();
+                let session="AM";
+
+                if(hours>=12){
+                    session="PM"
+                }
+                if(hours < 10){
+                    hours = "0"+ hours;
+
+                }
+
+                    if(min < 10){
+                    min = "0"+ min;
+                    }
+
+                     if(sec < 10){
+                    sec = "0"+ sec;
+                    }
+                    let digital = hours + ":" + min + ":" + sec + " " + session;
+                    document.getElementById('clock').textContent = digital;
+
+                }
+
+            
+            Time();
+            setInterval(Time,1000);
+
+            
+        </script>
+        </fieldset>
+        </form>
+
+    </body>
+</html>

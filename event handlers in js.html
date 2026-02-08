@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>Event handlers in JS</title>
+        <style>
+            fieldset{
+                margin-left:530px;
+                width: 350px;
+                height: 355px;
+                margin-top: 170px;
+                border-radius: 10px;
+                background-color: rgb(160, 207, 230);
+                box-shadow: 0 0 10px rgba(0,0,0,0.7);
+            }
+            body{
+                background-color: azure;
+            }
+            .i1{
+                margin-left: 50px;
+                width: 240px;
+                height: 35px;
+                font-size: 17px;
+                padding: 5px;
+                border: 0.9px solid;
+                border-radius: 5px;
+            }
+            button:hover{
+                background-color: rgb(106, 106, 106);
+            }
+            h1{
+                text-align: center;
+                margin-top: 40px;
+            }
+            button{
+                margin-left: 130px;
+                border: none;
+                width: 80px;
+                height: 40px;
+                background-color: rgb(178, 178, 178);
+                border-radius: 9px;
+            }
+            .p1{
+                margin-left: 55px;
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset>
+        <h1>Event handlers in JS</h1><br>
+        <label class="l1"></label>
+        <input class="i1" type="text" id="Username" placeholder="Enter Username"><br><br>
+        <label class="l1"></label>
+        <input class="i1" type="password" id="password" placeholder="Enter password"><br><br><br>
+        <button onclick="Event()">Login</button><br><br>
+        <p id="result" class="p1"></p>
+        <script>
+            function Event(){
+                // alert("Hello Mahir");
+                var Username=document.getElementById("Username").value;
+                var password=document.getElementById("password").value;
+
+                if(Username=="Mahir" && password=="123"){
+                    document.getElementById("result").innerHTML="Login Successfully";
+                    // document.writeln("Login Successfully");
+
+                }
+                else{
+                    document.getElementById("result").innerHTML="Login Failed";
+                    // document.writeln("Login Failed");
+                }
+            }
+        </script>
+        </fieldset>
+    </body>
+</html>

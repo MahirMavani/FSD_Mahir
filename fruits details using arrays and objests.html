@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>arrays example</title>
+        <style>
+            fieldset{
+                width: 380px;
+                margin-left: 520px;
+                height: 320px;
+                margin-top: 210px;
+                border-radius: 10px;
+            }
+            h2{
+                text-align: center;
+            }
+            .button{
+                height: 35px;
+                margin-left: 100px;
+                width: 180px;
+                background-color: rgb(253, 176, 8);
+                color: black;
+                font-size: 18px;
+                border: 2px;
+            }
+            button:hover{
+                background-color: rgb(158, 91, 4);
+            }
+        </style>
+    </head>
+
+    <body>
+        <fieldset>
+
+        <h2>Fruits List</h2>
+        <button class="button" onclick="showfruits()">show fruits</button>
+
+        <p id="fruits"></p>
+
+        <script>
+            function showfruits() {
+                let fruits = [
+            
+                    "1.mango<br>",
+                    "2.strawberry<br>",
+                    "3.apple<br>",
+                    "4.kiwi<br>",
+                    "5.grapes<br>",
+                    "6.pineapple<br>",
+                    "7.papaya<br>",
+                    "8.watermelon<br>",
+                    "9.orange<br>",
+                    "10.pear"
+                ];
+
+
+                document.getElementById("fruits").innerHTML = fruits.join(" ");
+            }
+        </script>
+        </fieldset>
+
+    </body>
+</html>

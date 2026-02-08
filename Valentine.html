@@ -1,0 +1,123 @@
+<html>
+    <head>
+        <title>Valentine Week Days</title>
+        <style>
+            fieldset{
+                width: 400px;
+                height: 280px;
+                margin: auto;
+                margin-top: 100px;
+                background: rgba(255, 150, 150, 1);
+                border-radius: 20px;
+                border: none;
+                box-shadow: 0 15px 30px rgba(0,0,0,0.7);
+                
+            }
+            h2{
+                text-align: center;
+                font-size: 30px;
+                color: rgb(128, 0, 0);
+            }
+            .i1{
+
+                display: block;
+                margin: auto;
+                width: 130px;
+                padding: 6px;
+                text-align: center;
+                border-radius: 8px;
+                border: 1px solid rgb(128, 0, 0);
+            }
+
+            .b1{
+                display: block;
+                margin: auto;
+                margin-top: 15px;
+                padding: 8px 20px;
+                border-radius: 20px;
+                border: none;
+                background-color: rgb(128, 0, 0);
+                color: white;
+                cursor: pointer;
+            }
+            .p1{
+                text-align: center;
+                font-size: 22px;
+            }
+            .b1:hover{
+                background-color: rgb(90, 0, 0);
+            }
+            
+            body {
+                background:url(SL-110320-37450-193.jpg);
+                background-size: cover;
+                
+            }
+            .result{
+                text-align: center;
+                margin-top: 20px;
+                font-size: 24px;
+                color: rgb(90, 0, 0);
+            }
+            
+            
+
+            
+        </style>
+    </head>
+
+    <body>
+
+        <fieldset>
+
+        <h2>Valentine's Week</h2>
+
+        <p class="p1">Enter a number (1 to 7):</p>
+        <input class="i1" type="number" id="day">
+        <br>
+
+        <button class="b1" onclick="showDay()">Check Day</button>
+
+        <h3 class="result" id="result"></h3>
+
+        <script>
+            function showDay() {
+                let d = document.getElementById("day").value;
+                let result = "";
+
+                switch (d) {
+                    case "1":
+                        result = "Rose Day";
+                        break;
+                    case "2":
+                        result = "Propose Day ";
+                        break;
+                    case "3":
+                        result = "Chocolate Day ";
+                        break;
+                    case "4":
+                        result = "Teddy Day ";
+                        break;
+                    case "5":
+                        result = "Promise Day ";
+                        break;
+                    case "6":
+                        result = "Hug Day ";
+                        break;
+                    case "7":
+                        result = "Kiss Day ";
+                        break;
+                    default:
+                        result = "Please enter a number between 1 and 7";
+
+                }
+
+                document.getElementById("result").innerHTML = result;
+            }
+        </script>
+        </fieldset>
+        
+        
+        
+    </body>
+</html>
